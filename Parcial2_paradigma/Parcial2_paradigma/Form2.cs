@@ -16,5 +16,19 @@ namespace Parcial2_paradigma
         {
             InitializeComponent();
         }
+
+        private void BtnSi_Click(object sender, EventArgs e)
+        {
+            Si Ventana2 = new Si();
+            Ventana2.Show();
+            this.Hide();
+        }
+
+        private void BtnNo_Click(object sender, EventArgs e)
+        {
+            No Ventana3 = new No();
+            Ventana3.Show();
+            this.Hide();
+        }
     }
 }

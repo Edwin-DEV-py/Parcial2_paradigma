@@ -55,6 +55,7 @@ namespace Parcial2_paradigma
             this.BtnParquear.TabIndex = 1;
             this.BtnParquear.Text = "Parquear";
             this.BtnParquear.UseVisualStyleBackColor = false;
+            this.BtnParquear.Click += new System.EventHandler(this.BtnParquear_Click);
             // 
             // BtnRetirar
             // 

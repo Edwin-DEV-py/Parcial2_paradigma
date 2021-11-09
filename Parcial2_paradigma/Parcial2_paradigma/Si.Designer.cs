@@ -29,12 +29,17 @@ namespace Parcial2_paradigma
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CedulaSi = new System.Windows.Forms.RichTextBox();
             this.PlacaSi = new System.Windows.Forms.RichTextBox();
             this.BtnParquearSi = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.combovehiculoSi = new System.Windows.Forms.ComboBox();
+            this.hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -93,19 +98,61 @@ namespace Parcial2_paradigma
             this.BtnParquearSi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnParquearSi.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnParquearSi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnParquearSi.Location = new System.Drawing.Point(124, 335);
+            this.BtnParquearSi.Location = new System.Drawing.Point(121, 448);
             this.BtnParquearSi.Name = "BtnParquearSi";
             this.BtnParquearSi.Size = new System.Drawing.Size(227, 74);
             this.BtnParquearSi.TabIndex = 6;
             this.BtnParquearSi.Text = "Parquear";
             this.BtnParquearSi.UseVisualStyleBackColor = false;
+            this.BtnParquearSi.Click += new System.EventHandler(this.BtnParquearSi_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Sitka Small", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(51, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(247, 39);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Tipo de vehiculo:";
+            // 
+            // combovehiculoSi
+            // 
+            this.combovehiculoSi.FormattingEnabled = true;
+            this.combovehiculoSi.Items.AddRange(new object[] {
+            "Carro",
+            "Camioneta",
+            "Microbus"});
+            this.combovehiculoSi.Location = new System.Drawing.Point(62, 320);
+            this.combovehiculoSi.Name = "combovehiculoSi";
+            this.combovehiculoSi.Size = new System.Drawing.Size(183, 23);
+            this.combovehiculoSi.TabIndex = 8;
+            // 
+            // hora
+            // 
+            this.hora.Font = new System.Drawing.Font("Sitka Small", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.hora.ForeColor = System.Drawing.SystemColors.Control;
+            this.hora.Location = new System.Drawing.Point(51, 360);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(131, 39);
+            this.hora.TabIndex = 9;
+            this.hora.Text = "Hora";
+            this.hora.Click += new System.EventHandler(this.hora_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Si
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(471, 450);
+            this.ClientSize = new System.Drawing.Size(471, 545);
+            this.Controls.Add(this.hora);
+            this.Controls.Add(this.combovehiculoSi);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BtnParquearSi);
             this.Controls.Add(this.PlacaSi);
             this.Controls.Add(this.CedulaSi);
@@ -127,5 +174,9 @@ namespace Parcial2_paradigma
         private System.Windows.Forms.RichTextBox CedulaSi;
         private System.Windows.Forms.RichTextBox PlacaSi;
         private System.Windows.Forms.Button BtnParquearSi;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox combovehiculoSi;
+        private System.Windows.Forms.Label hora;
+        private System.Windows.Forms.Timer timer1;
     }
 }

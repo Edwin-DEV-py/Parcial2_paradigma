@@ -21,5 +21,12 @@ namespace Parcial2_paradigma
         {
 
         }
+
+        private void BtnParquear_Click(object sender, EventArgs e)
+        {
+            Form2 Ventana1 = new Form2();
+            Ventana1.Show();
+            this.Hide();
+        }
     }
 }
